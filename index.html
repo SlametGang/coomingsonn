@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Coming Soon</title>
+    <style>
+        /* Mengatur dasar halaman */
+        body, html {
+            height: 100%;
+            margin: 0;
+            font-family: 'Arial', sans-serif;
+            background-color: #2c3e50; /* Warna latar abu-abu */
+            color: #FFD700; /* Warna Kuning */
+            /* Menggunakan Flexbox untuk memusatkan konten */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            overflow: hidden; /* Mencegah scrollbar muncul */
+        }
+
+        /* Kontainer untuk tulisan */
+        .coming-soon-container {
+            display: flex;
+            align-items: center; /* Membuat huruf dan gambar sejajar */
+            justify-content: center;
+            text-align: center;
+        }
+
+        /* Styling untuk tulisan "COMINGSOON" */
+        .coming-soon-text {
+            font-weight: bold;
+            text-transform: uppercase;
+            letter-spacing: 0.1em;
+            /* Ukuran font yang responsif */
+            /* Ukuran akan 10% dari lebar layar, tapi tidak lebih kecil dari 2.5rem dan tidak lebih besar dari 8rem */
+            font-size: clamp(2.5rem, 10vw, 8rem);
+            
+            /* Mengaktifkan flexbox agar gambar sejajar dengan teks */
+            display: flex;
+            align-items: center;
+        }
+
+        /* Styling khusus untuk gambar yang menjadi huruf 'O' */
+        .rotating-o {
+            /* Ukuran gambar dibuat relatif terhadap ukuran font (0.8em = 80% dari tinggi font) */
+            height: 0.8em;
+            width: 0.8em;
+            margin: 0 0.1em; /* Memberi sedikit spasi di kiri dan kanan gambar */
+
+            /* Properti untuk animasi berputar */
+            animation-name: spin;
+            animation-duration: 5s; /* Durasi satu putaran (5 detik) */
+            animation-timing-function: linear; /* Kecepatan putaran konstan */
+            animation-iteration-count: infinite; /* Mengulang animasi selamanya */
+        }
+
+        /* Definisi animasi 'spin' */
+        @keyframes spin {
+            from {
+                transform: rotate(0deg);
+            }
+            to {
+                transform: rotate(360deg);
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <div class="coming-soon-container">
+        <h1 class="coming-soon-text">
+            <span>C</span>
+            <img src="images/logo-my.png" alt="O" class="rotating-o">
+            <span>MING S</span>
+            <img src="images/logo-my.png" alt="O" class="rotating-o">
+            <img src="images/logo-my.png" alt="O" class="rotating-o">
+            <span>N</span>
+        </h1>
+    </div>
+
+</body>
+</html>
